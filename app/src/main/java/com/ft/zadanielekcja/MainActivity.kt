@@ -25,9 +25,27 @@ class MainActivity : AppCompatActivity() {
 
             }
 
+
+            for (c in x)
+            {
+
+                if (c.isLowerCase())
+                {
+                    findViewById<CheckedTextView>(R.id.mala).isChecked=true
+                }
+                if (c.isUpperCase())
+                {
+                    findViewById<CheckedTextView>(R.id.duza).isChecked=true
+                }
+            }
+
             if (x!=y){
                 findViewById<CheckedTextView>(R.id.zgodne).isChecked=false
             }
+
+
+
+
 
         }
     }
