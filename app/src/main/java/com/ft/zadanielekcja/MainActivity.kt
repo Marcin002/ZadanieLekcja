@@ -22,25 +22,29 @@ class MainActivity : AppCompatActivity() {
 
             if (x==y){
                 findViewById<CheckedTextView>(R.id.zgodne).isChecked=true
-
-            }
-
-
-            for (c in x)
-            {
-
-                if (c.isLowerCase())
+                for (c in x)
                 {
-                    findViewById<CheckedTextView>(R.id.mala).isChecked=true
-                }
-                if (c.isUpperCase())
-                {
-                    findViewById<CheckedTextView>(R.id.duza).isChecked=true
+
+                    if (c.isLowerCase())
+                    {
+                        findViewById<CheckedTextView>(R.id.mala).isChecked=true
+                    }
+                    if (c.isUpperCase())
+                    {
+                        findViewById<CheckedTextView>(R.id.duza).isChecked=true
+                    }
+                    if(c.isDigit()){
+                        findViewById<CheckedTextView>(R.id.cyfra).isChecked=true
+
+                    }
                 }
             }
 
             if (x!=y){
                 findViewById<CheckedTextView>(R.id.zgodne).isChecked=false
+                findViewById<CheckedTextView>(R.id.mala).isChecked=false
+                findViewById<CheckedTextView>(R.id.duza).isChecked=false
+                findViewById<CheckedTextView>(R.id.cyfra).isChecked=false
             }
 
 
