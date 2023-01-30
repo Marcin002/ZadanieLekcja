@@ -34,12 +34,12 @@ class MainActivity : AppCompatActivity() {
                     }
                     if(c.isDigit()){
                         findViewById<CheckedTextView>(R.id.cyfra).isChecked=true
-
-                    }
-                    if(x.contains(Regex("[@#\$%^&+=]"))){
-                        findViewById<CheckedTextView>(R.id.specjalne).isChecked=true
                     }
                 }
+                if(x.contains(Regex("[@#\$%^&+=]"))){
+                    findViewById<CheckedTextView>(R.id.specjalne).isChecked=true
+                }
+
             }
 
             if (x!=y){
