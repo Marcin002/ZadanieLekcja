@@ -19,7 +19,6 @@ class MainActivity : AppCompatActivity() {
             var x=findViewById<TextView>(R.id.editTextTextPassword3).text.toString()
             var y=findViewById<TextView>(R.id.editTextTextPassword4).text.toString()
 
-
             if (x==y){
                 findViewById<CheckedTextView>(R.id.zgodne).isChecked=true
                 for (c in x)
@@ -37,6 +36,9 @@ class MainActivity : AppCompatActivity() {
                         findViewById<CheckedTextView>(R.id.cyfra).isChecked=true
 
                     }
+                    if(x.contains(Regex("[@#\$%^&+=]"))){
+                        findViewById<CheckedTextView>(R.id.specjalne).isChecked=true
+                    }
                 }
             }
 
@@ -45,6 +47,7 @@ class MainActivity : AppCompatActivity() {
                 findViewById<CheckedTextView>(R.id.mala).isChecked=false
                 findViewById<CheckedTextView>(R.id.duza).isChecked=false
                 findViewById<CheckedTextView>(R.id.cyfra).isChecked=false
+                findViewById<CheckedTextView>(R.id.specjalne).isChecked=false
             }
 
 
